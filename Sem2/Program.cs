@@ -43,12 +43,10 @@
 
 //   ЗАДАЧА 4
 
-int num = 4;
-//if (num / 10 == 0)
-//{
-   //Console.Write(num);
-//}
-//else
+int num = 45234256;
+if (num / 10 > 0)
+{
+
 int last = num / 10;
 int i = 1;
 while (last > 0)
@@ -56,7 +54,6 @@ while (last > 0)
    last = last / 10;
    i = i + 1;
 }
-//Console.Write(i);
 
 int ii = 1;
 int exp = 10;
@@ -67,12 +64,16 @@ for (ii = 1; ii <= i - 2; ii++)
 int first = num / exp;
 Console.Write(first + ",");
 
-for (ii = i - 1; ii >= 1; ii--)
+
+for (ii = i - 2; ii >= 1; ii--)
 {
    exp = exp / 10;
    int next = num / (exp);
    next = next % 10;
    Console.Write(next + ",");
 }
-//Console.Write(i);
+Console.Write(num%10);
+}
+else
+Console.Write(num);
 
