@@ -44,6 +44,7 @@
 //   ЗАДАЧА 4
 
 int num = 45234256;
+int exp = 10;
 if (num / 10 > 0)
 {
 
@@ -51,24 +52,25 @@ int last = num / 10;
 int i = 1;
 while (last > 0)
 {
+   exp = exp*10;
    last = last / 10;
    i = i + 1;
 }
 
-int ii = 1;
-int exp = 10;
-for (ii = 1; ii <= i - 2; ii++)
-{
-   exp = exp * 10;
-}
-int first = num / exp;
-Console.Write(first + ",");
 
 
-for (ii = i - 2; ii >= 1; ii--)
+//for (ii = 1; ii <= i - 2; ii++)
+//{
+   //exp = exp * 10;
+//}
+//int first = num / exp;
+//Console.Write(first + ",");
+
+
+for (i = i - 1; i >= 1; i--)
 {
    exp = exp / 10;
-   int next = num / (exp);
+   int next = num / exp;
    next = next % 10;
    Console.Write(next + ",");
 }
@@ -77,3 +79,5 @@ Console.Write(num%10);
 else
 Console.Write(num);
 
+//int k = 1;
+//Console.Write(";" + k%10);
