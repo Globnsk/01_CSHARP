@@ -1,10 +1,9 @@
-﻿void PrintSquare(int limit)
+﻿double CalculateFormula(int a, int b, int c, int d)
 {
-    int i = 1;
-    while(i <= limit){
-        Console.Write($"{i*i} ");
-       i++;
-    }
-
+    double numinator = a * b;
+    int denuminator = c + d;
+    double result = numinator / denuminator;
+    return result;
 }
-PrintSquare(15);
+double answer = CalculateFormula(1, 2, 3, 4);
+Console.Write(answer);
