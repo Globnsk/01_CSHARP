@@ -6,7 +6,7 @@ int Ackermann(int n, int m)
     {
         return m + 1;
     }
-    else if (n != 0 && m == 0)
+    else if (m == 0)
     {
         return Ackermann(n - 1, 1);
     }
