@@ -1,6 +1,7 @@
-﻿﻿// Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+﻿﻿// Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+//Даны два неотрицательных числа m и n.
 
-int Ackermann(int n, int m)
+int Ack(int n, int m)
 {
     if (n == 0)
     {
@@ -8,12 +9,12 @@ int Ackermann(int n, int m)
     }
     else if (m == 0)
     {
-        return Ackermann(n - 1, 1);
+        return Ack(n - 1, 1);
     }
     else
     {
-        return Ackermann(n - 1, Ackermann(n, m - 1));
+        return Ack(n - 1, Ack(n, m - 1));
     }
 }
 
-Console.Write(Ackermann(2, 3));
+Console.Write(Ack(2, 3));
